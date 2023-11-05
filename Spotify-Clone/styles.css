@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+#bgImage {
+    position: fixed;
+    top: 50%; /* Place the top of the element at the vertical center */
+    left: 50%; /* Place the left of the element at the horizontal center */
+    transform: translate(-50%, -50%);
+    width: 70%;
+    border-radius: 12px;
+    width: 1180px; /* Adjust width to match the container */
+    height: 78vh; /* Adjust height to match the container */
+    background: url('bg (1).jpg'); /* Update this to your background image */
+    z-index: -1; /* Set a lower z-index than the video */
+    background-position: center ;
+    background-position-y: 0px;
+  }
+  
+  #backgroundVideo {
+    position: fixed;
+    top: 50%; /* Place the top of the element at the vertical center */
+    left: 50%; /* Place the left of the element at the horizontal center */
+    transform: translate(-43%, -50%);
+    width: 80%;
+    border-radius: 12px;
+    width: 1180px; /* Adjust width to match the container */
+    height: 78vh;
+    z-index: -1; /* Set a very low z-index to place it behind other elements */
+    pointer-events: none;
+    background-position: center ;
+    background-position-y: 0px;
+  }
+  
+  input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #10bb0d;
+  }
+  
+  .container {
+    position: relative; /* Ensure the z-index works within this container */
+    z-index: 2; /* Set a higher z-index than the video and bgImage */
+  
+    /* Other existing styles */
+    min-height: 72vh;
+    background-color: rgb(212, 12, 12);
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+  }
+
+.bottom {
+    position: sticky;
+    height: 90px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 12px 0;
+    z-index: 2;
+}
+
+.icons {
+    margin-top: 10px;
+    margin-bottom: 38px;
+    font-size: 12px;
+}
+
+.icons i {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.icons i:hover{
+    color: #10bb0d;
+}
+
+#MyProgressBar {
+    width: 80vw;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 10px;
+}
+.bottom input {
+    color: #10bb0d;
+}
+
+
+
+.songItems {
+    height: 40px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItems img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songitemcontainer {
+    margin-top: 74px;
+}
+.songinfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songinfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.songlist {
+    max-height: 550px;
+    margin-right: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-right: 20px;
+    scroll-behavior: smooth;
+    z-index: 2;
+}
+
+.songlist::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.songlist::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.songItems {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.songItems:hover {
+    background-color: #10bb0d;
+    transition: background-color 0.3s ease;
+}
+
+/* Additional animations */
+@keyframes songListAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.songItems {
+    animation: songListAnimation 0.5s ease both;
+}
+
+
+
+
+
