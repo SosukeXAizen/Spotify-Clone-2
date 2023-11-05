@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+
 console.log("welcome");
 let songindex = 0;
 let audioElement = new Audio("songs/1.mp3");
@@ -187,4 +187,3 @@ document.getElementById('previous').addEventListener('click', () => {
   masterPlay.classList.add('fa-circle-pause');
   updateBackgroundVideo(songs[songindex].videoPath);
 });
-})
